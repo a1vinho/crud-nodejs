@@ -1,0 +1,84 @@
+        /* Estilos gerais */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+       
+        .container-register {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        
+        .form-register div {
+            margin-bottom: 20px;
+        }
+
+        .form-register label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-register input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-register input:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+        }
+
+        
+        .form-register button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-register button:hover {
+            background-color: #0056b3;
+        }
+
+       
+        @media (max-width: 768px) {
+            .container-register {
+                padding: 20px;
+                display:flex;
+                flex-direction: column;
+                height:100%;
+                
+                justify-content: center;
+            }
+
+            .form-register button {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .form-register input, .form-register button {
+                font-size: 14px;
+            }
+        }

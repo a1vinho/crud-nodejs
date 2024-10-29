@@ -1,0 +1,255 @@
+main {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    padding:30px;
+}
+
+main > .container {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow:0 0 10px 0px rgba(0, 0, 0, 0.2);
+    padding:20px;
+}
+
+.container .form-create {
+    width:100%;
+    display:flex;
+    gap:10px;
+}
+.form-create input {
+    width:100%;
+    padding:15px;
+    font-size:1em;
+    border:none;
+    background-color: #95f0fb;
+    border-radius:5px;
+}
+.form-create input:focus {
+    outline:1px solid rgb(102, 102, 243);
+}
+.form-create button {
+    width:80px;
+    border:none;
+    border-radius:5px;
+    color:white;
+    font-size:1em;
+    background-color: #10173f;;
+    cursor: pointer;
+}
+
+table {
+    
+    width:100%;
+    margin-top:20px;
+    
+}
+table td,th {
+    border:1px solid #ccc;
+    padding:10px;
+    text-align:center;
+}
+td button {
+    border:none;
+    padding:5px;
+    border-radius:5px;
+    cursor:pointer;
+}
+td #edit-button {
+    background-color: #ff9b08;
+}
+td #delete-button {
+    background-color: red;
+}
+td #check-button {
+    background-color: #f5f236;
+}
+.update-task {
+    position: absolute;
+    display:none;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #f0f4f8;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.update-task h2 {
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.update-task form div {
+    margin-bottom: 15px;
+}
+
+.update-task label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.update-task input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.update-task input[type="text"]:focus {
+    border-color: #007bff;
+}
+
+.update-task button {
+    width: 100%;
+    padding: 10px;
+    background-color: #10173f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+@media (max-width: 480px) {
+    .update-task {
+        width: 90%;
+    }
+
+    .update-task h2 {
+        font-size: 20px;
+    }
+}
+.shadow {
+    display:none;
+    background-color: rgba(0, 0, 0, 0.267);
+    width:100%;
+    height: 100%;
+    position: fixed;
+}
+.actions {
+    position: fixed;
+    display:flex;
+    gap:10px;
+    align-items: end;
+    height:50px;
+    top: 85%;
+    right:50px;
+}
+.actions button {
+    padding:5px;
+    cursor: pointer;
+    border:none;
+    color:white;
+    background-color: #ff9b08;
+    border-radius:5px;
+}
+
+.ul-actions {
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    background-color: white;
+    list-style-type: none;
+    padding:5px;
+}
+
+.ul-actions li {
+    cursor:pointer;
+    display: flex;
+    gap:5px;
+    align-items:center;
+}
+
+.ul-actions li input {
+    padding:5px;
+    border-radius:5px;
+    background-color: #95f0fb;
+    border:none;
+    font-size:1em;
+}
+
+.form-description {
+    display:flex;
+    gap:10px;
+    justify-content: center;
+}
+.form-description input {
+    padding:5px;
+    background-color: #95f0fb;
+    border:none;
+    outline:1px solid rgb(89, 89, 233);
+    border-radius:5px;
+}
+
+.form-description button {
+    border:none;
+    cursor:pointer;
+    background-color: transparent;;
+}
+
+@media (max-width:650px) {
+    main {
+        padding:0;
+    }
+    main .container {
+        width:100%;
+    }
+}
+
+.question-delete {
+    display:none;
+    width: 400px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    position:absolute;
+    transform: translate(-50%,-50%);
+    left:50%;
+    top:50%;
+}
+
+.question-delete h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.buttons button {
+    background-color: #007bff;
+    color: white;
+}
+
+.buttons button:hover {
+    background-color: #0056b3;
+}

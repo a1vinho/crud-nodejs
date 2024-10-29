@@ -1,0 +1,108 @@
+{{>header}}
+
+<div class="shadow"></div>
+<main class="main-index">
+    <div class="container">
+        <div style="border-bottom: 1px solid #ccc; padding:10px;" class="form-create-task">
+            <form class="form-create">
+                <input type="text" placeholder="Adicione uma tarefa">
+                <button id="create-task">
+                    <span class="material-symbols-outlined">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#ffff">
+                            <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
+                        </svg>
+                    </span>
+                </button>
+            </form>
+        </div>
+
+        <div class="container-tasks" style="margin-top: :10px;">
+            <table p>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Data de crianção</th>
+                    <th>Concluída</th>
+                    <th>Ações</th>
+                </tr>
+                
+                {{#each tasks}}
+                <tr class="task">
+                    <td id="id-task">
+                        {{this.id}}
+                    </td>
+                    <td>
+                        {{this.title}}
+                    </td>
+                    {{#if this.description}}
+                    <td>{{this.description}}</td>
+                    {{else}}
+                    <td>
+                        Nenhuma descrição adicionada
+                    </td>
+                    {{/if}}
+                    <td>
+                        {{formatDate this.date}}
+                    </td>
+                    <td>
+                        {{#if this.done}}
+                        Tarefa Concluída
+
+                        {{else}}
+                        Tarefa não concluida
+                        {{/if}}
+                    </td>
+                    <td>
+                        <button class="edit-button" id='edit-button'>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="white">
+                            <path
+                                d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z" />
+                        </svg>
+                        </button>
+
+                        <button id='delete-button'>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="white">
+                                <path
+                                    d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
+                            </svg>
+                        </button>
+                        <button id='check-button'>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                                fill="white">
+                                <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+                            </svg>
+                        </button>
+                    </td>
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+    </div>
+
+    <div class="update-task">
+        <h2>Atualiza task</h2>
+        <form class="form-update">
+            <div>
+                <label for="edit-input">Alterar titulo</label>
+                <input type="text" placeholder="Alterar titulo" id="edit-input">
+            </div>
+            <div>
+                <label for="edit-description">Alterar descrição</label>
+                <input type="text" placeholder="Alterar descrição" id="edit-description">
+            </div>
+            <button>Update</button>
+        </form>
+    </div>
+    <div class="question-delete">
+        <h2>Tem certeza que deseja deleta essa tarefa ?</h2>
+
+        <div class="buttons">
+            <button>Sim</button>
+            <button>Não</button>
+        </div>
+    </div>
+</main>
